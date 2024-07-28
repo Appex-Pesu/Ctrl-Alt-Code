@@ -6,14 +6,15 @@
   position: relative;
   right: 130px;
 }
+
 .Logo {
   width: 100%;
   display: inline-block;
   margin: 0;
   padding: 0;
-  position: absolute;
+  text-align: center;
+  position: relative;
 }
-
 
 .LogoSectionAbout {
   text-align: left;
@@ -22,6 +23,7 @@
   position: relative;
   font-family: 'Nunito', sans-serif;
 }
+
 .LogoSectionAbout h1 {
   font-weight: 700;
   text-align: left;
@@ -31,6 +33,7 @@
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 2s infinite alternate;
 }
+
 @-webkit-keyframes mover {
   0% {
     transform: translateY(0);
@@ -39,6 +42,7 @@
     transform: translateY(-10px);
   }
 }
+
 @keyframes mover {
   0% {
     transform: translateY(0);
@@ -50,22 +54,27 @@
 
 @media (max-width: 570px) {
   .logoS {
-    margin-top: 10rem;
-    margin-bottom: -10rem;
+    width: 100%; /* Ensure the element uses the full width of the screen */
+    height: auto; /* Adjust height to auto for better responsiveness */
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative; /* Change to relative for better control */
+    right: 0;
+    text-align: center; /* Center-align the text */
   }
+
   .Logo {
     margin: 0 auto;
     width: 60%;
+    display: block; /* Change display to block for proper centering */
   }
-}
 
-@media (max-width: 570px) {
-  .logoS {
-    margin-top: 10rem;
-    margin-bottom: -10rem;
-    /* background-color: black; */
+  .LogoSectionAbout {
+    width: 100%; /* Ensure the section uses the full width of the screen */
+    text-align: center; /* Center-align the text */
   }
-  .Logo {
-    margin: 0 auto;
+
+  .LogoSectionAbout h1 {
+    text-align: center; /* Center-align the heading */
   }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import HomePage from '../Home/HomePage';
@@ -29,27 +29,6 @@ const Wrapper = styled.div`
     }
   }
 `;
-
-// const MdxContent = () => {
-//   return (
-//     <div
-//       style={{
-//         backgroundColor: 'red'
-//       }}
-//     >
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-//       <h1>This is blog</h1>
-
-//     </div>
-//   );
-// };
 
 const NAVBAR = ({}) => {
   const [toggle, setToggle] = useState(true);
@@ -93,18 +72,14 @@ const NAVBAR = ({}) => {
   return (
     <Router>
       <nav className={`nav_bar ${isOffset && 'nav_bar-offset-crossed'}`}>
-        
         <Wrapper toggle={toggle}>
           <div className="nav-content" ref={navigation}>
             <ul>
-            <li >
-                <Link  to={`#home`}>
-<img src="https://i.ibb.co/nDdRq5k/COCLOGO.jpg" width="40" height="40" />
-                  
+              <li>
+                <Link to={`#home`}>
+                  <img src="https://i.ibb.co/nDdRq5k/COCLOGO.jpg" width="40" height="40" />
                 </Link>
-                </li>
-            
-              
+              </li>
               <li>
                 <Link to={`#prizes`} style={{textDecoration:"none"}}>
                   <span className="links"style={{fontFamily:"monospace"}} >Prizes</span>{' '}
@@ -120,17 +95,16 @@ const NAVBAR = ({}) => {
                   <span className="links" style={{fontFamily:"monospace"}}>FAQ's</span>{' '}
                 </Link>
               </li>
-               <li>
+              <li>
                 <Link to={`#contact`} style={{textDecoration:"none"}}>
                   <span className="links" style={{fontFamily:"monospace"}}>Contact Us</span>{' '}
                 </Link>
               </li>
-              
-              {/* <li>
-                <Link to={`#team`}>
-                  <span className="links">team </span>{' '}
-                </Link>
-              </li> */}
+              <li>
+                <a href="" style={{textDecoration:"none"}}>
+                  <span className="links" style={{fontFamily:"monospace"}}>Register Now</span>{' '}
+                </a>
+              </li>
               <img
                 className="s-close"
                 onClick={() => setToggle(true)}

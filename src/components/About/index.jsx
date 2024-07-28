@@ -1,6 +1,6 @@
 import './style.css';
 
-import {MIDDLE_SECTION} from '../../Module/General';
+import { MIDDLE_SECTION } from '../../Module/General';
 
 function LogoSectionAbout() {
   return (
@@ -19,4 +19,4 @@ function Logo() {
   );
 }
 
-export {Logo, LogoSectionAbout};
+export { Logo, LogoSectionAbout };

@@ -1,10 +1,8 @@
+import { useEffect, useState } from 'react';
 import { TOP_SECTION } from '../../Module/General';
 import MytypedComponent from '../Typed/index.js';
+import CountdownTimer from './CountdownTimer';
 import './style.css';
-// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
-
-
-
 
 const Btn = (props) => {
   return (
@@ -18,68 +16,42 @@ const Btn = (props) => {
   );
 };
 
-// const About = (props) => {
-//   const [vantaEffect, setVantaEffect] = useState(null)
-//   const myRef = useRef(null)
-//   useEffect(() => {
-//     if (!vantaEffect) {
-//       setVantaEffect(NET({
-//         el: myRef.current
-//       }))
-//     }
-//     return () => {
-//       if (vantaEffect) vantaEffect.destroy()
-//     }
-//   }, [vantaEffect]) 
-//    return <div ref={myRef}>
-//   Foreground content goes here
-// </div>
-// }
-const About = (props) => {
-  // const [vantaEffect, setVantaEffect] = useState(null)
-  //   const myRef = useRef(null)
-  //   useEffect(() => {
-  //     if (!vantaEffect) {
-  //       setVantaEffect(NET({
-  //         el: myRef.current,
-  //         minWidth: 500.00,
-  //         minHeight: 800.00
-  //       }))
-  //     }
-  //     return () => {
-  //       if (vantaEffect) vantaEffect.destroy()
-  //     }
-  //   }, [vantaEffect]) 
+const About = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 570);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 570);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className="AboutMe" >
-      <h2>{TOP_SECTION.TITLE}</h2>
+    <div className="AboutMe">
+      <h2>{isMobile ? '\u00A0\u00A0\u00A0Ctrl+Alt+Code' : 'Ctrl+Alt+Code'}</h2>
       <MytypedComponent />
-      <h3 style={{ marginBottom:"20px" ,fontSize:"25px"}}>{TOP_SECTION.SHORT_DESCRIPTION}</h3>
-      <h3 style={{fontSize:"25px",marginBottom:"25px"}}>{TOP_SECTION.desc}</h3>
-     <div 
-                className="d-inline-block apply-button"
-                data-hackathon-slug="Ctrl+Alt+Code"
-                data-button-theme="light"
-                style={{ height: "44px", width: "312px" }}
-      >
-       
-      </div> 
+      <h3>{TOP_SECTION.SHORT_DESCRIPTION}</h3>
+      <h3>{TOP_SECTION.desc}</h3>
+      <div
+        className="d-inline-block apply-button"
+        data-hackathon-slug="Ctrl+Alt+Code"
+        data-button-theme="light"
+        style={{ height: "44px", width: "312px" }}
+      ></div>
     </div>
   );
 };
 
-
 const Myinfo = () => {
- return (
-     <div className="Myinfo">
-       <About />
-      
-       </div>
- )
- 
- 
+  return (
+    <div className="Myinfo">
+      <div className="main-content">
+        <About />
+      </div>
+      <div className="timer-container">
+        <CountdownTimer targetDate="2024-08-30T23:59:59" />
+      </div>
+    </div>
+  );
 };
 
-
 export { Btn, Myinfo };
-

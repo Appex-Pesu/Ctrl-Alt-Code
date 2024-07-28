@@ -1,12 +1,10 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
 .h1 {
   margin: 0;
 }
+
 .masthead h2,
 .sub-heading {
   text-align: center;
@@ -26,12 +24,7 @@
   -webkit-text-fill-color: transparent;
   animation: animate 150s linear infinite;
 }
-@media (min-width: 992px) {
-  .masthead h2 {
-    max-width: 40rem;
-    font-size: 2rem;
-  }
-}
+
 .masthead {
   z-index: 3;
   position: relative;
@@ -44,6 +37,34 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+.Myinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.AboutMe h2 {
+  font-size: 8rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.Myinfo p {
+  width: 70%;
 }
 
 button {
@@ -71,12 +92,6 @@ button {
 .join_dis {
   margin-bottom: 1px;
   margin-top: 19px;
-  
-}
-
-.buttom-group{
-  width: 100%;
-  overflow: auto;
 }
 
 .register {
@@ -85,34 +100,11 @@ button {
   background-color: transparent;
 }
 
-.AboutMe h2 {
-  font-size: 8rem;
-  font-family: 'Noto Sans', sans-serif;
-}
-
-p {
-  font-size: 2rem;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-.Myinfo {
-  text-align: left;
-  margin-left: 10vh;
-}
-
-.Myinfo p {
-  width: 70%;
-}
-
-/* Over lay effect */
-
 .overlay {
   position: absolute;
   bottom: 0;
   left: 100%;
   right: 0;
- 
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -140,32 +132,54 @@ button:hover .overlay {
 
 @media (max-width: 1200px) {
   .AboutMe h2 {
-    /* font-size: 6rem; */
+    font-size: 6rem;
   }
 }
 
-/* main targer */
+@media (max-width: 992px) {
+  .masthead h2 {
+    max-width: 40rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Myinfo {
+    flex-direction: column;
+  }
+  
+  .timer-container {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+}
 
 @media (max-width: 570px) {
   .Myinfo p {
     width: 100%;
   }
+  
   .AboutMe h2 {
     font-size: 4rem;
   }
+  
+  .event-date,
+  .event-location {
+    font-size: 2.2rem; /* Increase the font size slightly */
+  }
+  
   .register {
     margin-left: 0;
     margin-top: 3vh;
   }
+  
   .Myinfo {
-    text-align: center;
+    text-align: left;
     margin-left: 0;
   }
+  
   .Myinfo p {
     font-size: 1.9rem;
-  }
-  .AboutMe {
-    text-align: center;
   }
 }
 
@@ -174,9 +188,11 @@ button:hover .overlay {
     margin-left: 0;
     margin-top: 3vh;
   }
+  
   .AboutMe h1 {
     font-size: 2.2em;
   }
+  
   .Myinfo p {
     font-size: 1.6rem;
   }

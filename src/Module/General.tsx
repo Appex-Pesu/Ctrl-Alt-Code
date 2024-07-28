@@ -668,12 +668,12 @@ const frequentlyAskedQuestions = [
       {
         label: 'What is Ctrl+Alt+Code?',
         content:
-          'Ctrl+Alt+Code is a 24 hour hackathon based on the latest technical fields that will bring together several teams to generate high-value actionable business ideas and product concepts. This hackathon covers the domains of web development, app development , blockchain , artificial intelligence and machine learning.'
+          'Ctrl+Alt+Code is a 24 hour hackathon based on the latest and trending technical fields that will bring together several teams to generate high-value actionable business ideas and product concepts.'
       },
       {
         label: 'Who can participate?',
         content:
-          'Ctrl+Alt+Code is open to all undergraduate students. Acceptance of applications is based on their interest in the available domains'
+          'Ctrl+Alt+Code is open to all students from 1st to 3rd Year. Acceptance of applications is based on their interest in the available domains'
       },
       {
         label: 'When will the applications close?',
@@ -690,22 +690,22 @@ const frequentlyAskedQuestions = [
       {
         label: 'How do you evaluate the applications?',
         content:
-          'We can get to know more about you from your past projects, open source contributions, GitHub profile.'
+          'We can get to know more about you from your past projects, open source contributions and GitHub profile.'
       },
       {
         label: 'What could be the size of each team?',
         content:
-          'A particular team can contain members from 3-4.'
+          'A particular team can contain 3-4 members.'
       },
       {
-        label: 'Do you provide travel reimbursement to hackers?',
+        label: 'Do you provide travel reimbursement to the participants?',
         content:
-          'The hackathon cannot cover the travel and other expenses for the attendees.'
+          'The hackathon cannot cover travel and other expenses for the attendees.'
       },
       {
         label: 'Did we miss something?',
         content:
-          'Write us at appexpesu5@gmail.com or DM us us your question on Instagram @appex.pesu, Our team will reach out to you as soon as possible.'
+          'Write to us at appexpesu5@gmail.com or DM us your question on Instagram @appex.pesu, our team will reach out to you as soon as possible.'
       }
     ]
   ]

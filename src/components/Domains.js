@@ -4,7 +4,7 @@ function Domains() {
   return (
     <>
       <div className="container text-center my-5">
-        <h1 style={{ color: 'white', marginTop: '10px' }}>Tracks</h1>
+        <h1 style={{ color: 'white', marginTop: '50px' }}>Tracks</h1>
         <div className="row justify-content-center mb-5">
           <div className="col-sm-6 col-xl-4 p-5 px-xl-4">
             <h1 style={{ color: 'white' }}>GenAI & ML</h1>
@@ -16,7 +16,8 @@ function Domains() {
             />
           </div>
           <div className="col-sm-6 col-xl-4 p-5 px-xl-4">
-            <h1 style={{ color: 'white' }}>Web3 & Cybersecurity</h1>
+            <h1 style={{ color: 'white' }}>Web3</h1>
+            {/* <h2 style={{ color: 'white' }}>And Cybersecurity</h2> */}
             <Player
               src="https://assets8.lottiefiles.com/packages/lf20_8jmombpq.json"
               className="player"
